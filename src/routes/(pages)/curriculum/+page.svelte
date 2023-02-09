@@ -2,4 +2,4 @@
   import Title from "$lib/Title.svelte";
 </script>
 
-<Title title="Sobre Mí" />
+<Title title="Currículum" />

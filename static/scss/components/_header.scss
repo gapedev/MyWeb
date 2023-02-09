@@ -1,0 +1,88 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+  background-color: $secondary;
+  display: flex;
+  flex-direction: column;
+  grid-area: header;
+  width: 400px;
+  min-height: 100vh;
+
+  &_img {
+    img {
+      height: 300px;
+      filter: grayscale(100%);
+    }
+  }
+
+  &_menu {
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 70px;
+      padding: 150px 0;
+      position: relative;
+
+      &::after {
+        content: "";
+        background-color: #242424;
+        border-radius: 50%;
+        position: absolute;
+        top: 75px;
+        left: 200px;
+        width: 10px;
+        height: 10px;
+      }
+
+      &::before {
+        content: "";
+        background-color: #242424;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 75px;
+        left: 200px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:before {
+        content: '';
+        border-top: solid 1px $primary;
+        position: absolute;
+        top: -40px;
+        width: 60px;
+        height: 10px;
+        transform: rotate(90deg);
+      }
+
+      &:last-child:after {
+        content: "";
+        border-top: solid 1px #242424;
+        position: absolute;
+        bottom: -40px;
+        width: 60px;
+        height: 10px;
+        transform: rotate(90deg);
+      }
+    }
+
+    a {
+      color: $primary;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.active {
+  color: $white;
+}
