@@ -2,17 +2,23 @@
 @use '../abstracts/mixins' as *;
 
 .title {
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  display: none;
+
+  @include desktop {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1200px;
+  }
 
   span {
-    border: 1px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.114);
     font-size: 5rem;
     padding: 20px 310px;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
+    width: 100%;
   }
 }

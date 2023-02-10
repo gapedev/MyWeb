@@ -13,11 +13,6 @@
     stroke-linecap="round"
     stroke-linejoin="round"
   /><g id="SVGRepo_iconCarrier">
-    <style type="text/css">
-      .st0 {
-        fill: #000000;
-      }
-    </style>
     <g>
       <path
         class="st0"

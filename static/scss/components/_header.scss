@@ -1,87 +1,128 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-.header {
-  background-color: $secondary;
-  display: flex;
-  flex-direction: column;
-  grid-area: header;
-  width: 400px;
-  min-height: 100vh;
 
-  &_img {
-    img {
-      height: 300px;
-      filter: grayscale(100%);
+
+
+
+.header {
+  .container {
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+
+    @include desktop {
+      width: inherit;
+      max-width: inherit;
+      overflow: inherit;
+      height: 100%;
     }
   }
 
-  &_menu {
+  .navbar {
+    --state-close: scale(0);
+    --state-hamburguer: scale(1);
+    --state-menu: translate(-100%);
+
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+
+    @include desktop {
+      --state-hamburguer: scale(0);
+      --state-menu: translate(0);
+      padding: unset;
+    }
+
+    &:target {
+      --state-close: scale(1);
+      --state-hamburguer: scale(0);
+      --state-menu: translate(0);
+
+      @include desktop {
+        --state-close: scale(0);
+      }
+    }
+
+    img {
+      width: 250px;
+      height: 250px;
+      filter: grayscale(100%);
+
+      @include desktop {
+        width: 400px;
+        height: 400px;
+        ;
+      }
+    }
+
     ul {
+      background-color: $secondary;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 70px;
-      padding: 150px 0;
-      position: relative;
+      gap: 2rem;
+      transform: var(--state-menu);
+      transition: $transition-menu;
 
-      &::after {
-        content: "";
-        background-color: #242424;
-        border-radius: 50%;
-        position: absolute;
-        top: 75px;
-        left: 200px;
-        width: 10px;
-        height: 10px;
-      }
-
-      &::before {
-        content: "";
-        background-color: #242424;
-        border-radius: 50%;
-        position: absolute;
-        bottom: 75px;
-        left: 200px;
-        width: 10px;
-        height: 10px;
+      @include desktop {
+        position: unset;
+        gap: 3rem;
       }
     }
 
     li {
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding-left: 5%;
 
-      &:before {
-        content: '';
-        border-top: solid 1px $primary;
-        position: absolute;
-        top: -40px;
-        width: 60px;
-        height: 10px;
-        transform: rotate(90deg);
-      }
-
-      &:last-child:after {
-        content: "";
-        border-top: solid 1px #242424;
-        position: absolute;
-        bottom: -40px;
-        width: 60px;
-        height: 10px;
-        transform: rotate(90deg);
+      @include desktop {
+        text-align: center;
+        padding: 0;
       }
     }
 
     a {
       color: $primary;
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: bold;
+      text-transform: uppercase;
+      transition: $transition-icon;
+
+      &:hover {
+        color: $white;
+      }
     }
+
+    .nav_close,
+    .nav_hamburger {
+      cursor: pointer;
+      grid-column: -2/-1;
+      grid-row: 1/2;
+      transition: $transition-menu;
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .nav_hamburger {
+      transform: var(--state-hamburguer);
+    }
+
+    .nav_close {
+      transform: var(--state-close);
+    }
+
   }
 }
+
 
 .active {
   color: $white;

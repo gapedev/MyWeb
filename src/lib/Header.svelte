@@ -1,49 +1,29 @@
 <script>
   import { page } from "$app/stores";
+  import NAVS from "../services/menu";
+  import Close from "./Close.svelte";
+  import Menu from "./Menu.svelte";
 
-  const LINKS = [
-    {
-      href: "/",
-      title: "Home",
-    },
-    {
-      href: "/about",
-      title: "Sobre Mí",
-    },
-    {
-      href: "/curriculum",
-      title: "Currículum",
-    },
-    {
-      href: "/portfolio",
-      title: "Portfolio",
-    },
-    {
-      href: "/proyectos",
-      title: "Proyectos",
-    },
-    {
-      href: "/contacto",
-      title: "Contacto",
-    },
-  ];
+  $: menu = "";
 
   $: routeId = $page.route.id;
 </script>
 
-<div class="header">
-  <div class="header_img">
-    <img src="/img/gabi.jpg" alt="Foto de Gabriel Pérez Licerán" />
-  </div>
-  <div class="header_menu">
-    <nav>
-      <ul>
-        {#each LINKS as { href, title }}
-          <li>
-            <a {href} class:active={routeId === href} {title}>{title}</a>
-          </li>
-        {/each}
-      </ul>
-    </nav>
-  </div>
-</div>
+<header class="header">
+  <nav class="navbar container" id="nav">
+    <ul>
+      <img src="/img/gabi.jpg" alt="" />
+      {#each NAVS as { href, title }}
+        <li>
+          <a {href} class:active={routeId === href} {title}>{title}</a>
+        </li>
+      {/each}
+    </ul>
+    <a class="nav_hamburger" href="#nav">
+      <Menu />
+    </a>
+    <a class="nav_close" href="#">
+      <Close />
+    </a>
+  </nav>
+</header>
