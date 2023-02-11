@@ -1,0 +1,102 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  &_left {
+    background-color: $white;
+  }
+
+  &_adress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+
+    &--title {
+      span {
+        display: flex;
+        justify-content: center;
+        padding: 0 10px;
+        transform: rotate(-90deg);
+        font-size: 1.5rem;
+        letter-spacing: 15px;
+        width: 50px;
+        text-transform: uppercase;
+        font-weight: bold;
+
+      }
+    }
+
+    &--info {
+      padding: 0 10px;
+      position: relative;
+
+      &:after {
+        content: '';
+        background-color: $secondary;
+        width: 6px;
+        height: 130px;
+        position: absolute;
+        top: -10px;
+        left: -8px;
+      }
+
+      a {
+        color: $primary;
+        font-size: 1.3rem;
+        text-decoration: underline $secondary;
+        transition: $transition-icon;
+        padding-bottom: 20px;
+
+        &:hover {
+          text-decoration: underline $primary;
+        }
+      }
+
+      p {
+        padding-bottom: 10px;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &_img {
+    img {
+      filter: grayscale(100%);
+    }
+  }
+
+  &_right {
+    background-color: $primary;
+  }
+
+  &_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 106px 0;
+
+    &--name {
+      color: $white;
+      font-size: 2rem;
+      margin: 0 auto;
+    }
+
+    &--position {
+      background-color: $secondary;
+      text-align: center;
+      font-style: italic;
+      color: $white;
+      font-size: 1.5rem;
+      padding: 30px 60px;
+    }
+  }
+
+  &_job {
+    background-color: $white;
+  }
+}

@@ -6,7 +6,7 @@
   height: 100vh;
 }
 
-@include FullHD {
+@include desktop {
   .body-container {
     display: grid;
     grid-template-columns: 0.6fr 2.2fr 0.1fr;
