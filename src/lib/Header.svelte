@@ -10,20 +10,27 @@
 </script>
 
 <header class="header">
-  <nav class="navbar container" id="nav">
+  <nav class="navbar" id="nav">
+    <img src="/img/gabi.jpg" alt="" />
     <ul>
-      <img src="/img/gabi.jpg" alt="" />
       {#each NAVS as { href, title }}
         <li>
           <a {href} class:active={routeId === href} {title}>{title}</a>
         </li>
       {/each}
     </ul>
-    <a class="nav_hamburger" href="#nav">
-      <Menu />
-    </a>
-    <a class="nav_close" href="#">
-      <Close />
-    </a>
+  </nav>
+
+  <nav class="navbar-mobile" id="nav">
+    <ul>
+      {#each NAVS as { href, title, img }}
+        <li>
+          <a {href} class:active={routeId === href} {title}>
+            <img src={img} alt={title} />
+          </a>
+          <p>{title}</p>
+        </li>
+      {/each}
+    </ul>
   </nav>
 </header>

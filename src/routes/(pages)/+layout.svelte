@@ -3,10 +3,16 @@
   import Header from "$lib/Header.svelte";
 </script>
 
-<div class="body-container">
-  <Header />
-  <Aside />
-  <main class="main">
-    <slot />
-  </main>
+<div class="container">
+  <div class="container_header">
+    <Header />
+  </div>
+  <div class="container_content">
+    <main>
+      <slot />
+    </main>
+  </div>
+  <div class="container_aside">
+    <Aside />
+  </div>
 </div>

@@ -1,21 +1,27 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-.body-container {
-  min-height: 500px;
-  height: 100vh;
-}
+.container {
+  display: grid;
+  grid-template-columns: .4fr 2fr .1fr;
 
-@include desktop {
-  .body-container {
-    display: grid;
-    grid-template-columns: 0.6fr 2.2fr 0.1fr;
-    grid-template-rows: 1fr 0fr 0fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header content aside"
-      "header content aside"
-      "header content aside";
+  &_content {
+    padding: 0;
+
+    @include desktop {
+      padding: 0 6px 0 311px;
+    }
+
+    @include large {
+      padding: 0 10px 0 320px
+    }
+
+    @include FullHD {
+      padding: 0 20px 0 30px;
+    }
+  }
+
+  &_aside {
+    padding-right: 10px;
   }
 }
