@@ -1,7 +1,19 @@
 <script>
+  import Github from "$lib/Github.svelte";
+  import Linkedin from "$lib/Linkedin.svelte";
   import Title from "$lib/Title.svelte";
   import EDUCATION from "../../../services/education";
   import JOBS from "../../../services/jobs";
+  import Html from "$lib/Html.svelte";
+  import Css3 from "$lib/Css3.svelte";
+  import Javascript from "$lib/Javascript.svelte";
+  import Sass from "$lib/Sass.svelte";
+  import Bulma from "$lib/Bulma.svelte";
+  import React from "$lib/React.svelte";
+  import Svelte from "$lib/Svelte.svelte";
+  import Git from "$lib/Git.svelte";
+  import Bitbucket from "$lib/Bitbucket.svelte";
+  import Azure from "$lib/Azure.svelte";
 </script>
 
 <Title title="Currículum" />
@@ -19,9 +31,50 @@
       </div>
     </div>
     <div class="curriculum_img">
-      <img src="/static/img/gabi.jpg" alt="" />
+      <img src="/img/gabi.jpg" alt="" />
     </div>
-    <div>3</div>
+    <div class="curriculum_text">
+      <h4>Sobre Mí</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam
+        quis fugit voluptates consequuntur eveniet assumenda illo, in cumque
+        quam.
+      </p>
+      <h2>Gabriel Pérez</h2>
+      <span>Desarrollador Front-End</span>
+    </div>
+    <div class="curriculum_rrss">
+      <div class="curriculum_item">
+        <div class="curriculum_rrss--icon">
+          <Github />
+        </div>
+        <div class="curriculum_rrss--text">
+          <p><a href="">https://github.com/gapedev</a></p>
+        </div>
+      </div>
+      <div class="curriculum_item">
+        <div class="curriculum_rrss--icon">
+          <Linkedin />
+        </div>
+        <div class="curriculum_rrss--text">
+          <p>
+            <a href=""
+              >https://www.linkedin.com/in/gabriel-p%C3%A9rez-licer%C3%A1n-b0826a14b/</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="curriculum_item">
+        <div class="curriculum_rrss--icon">
+          <img src="img/icons/device-desktop.svg" alt="" />
+        </div>
+        <div class="curriculum_rrss--text">
+          <p>
+            <a href="">www.demomento.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="curriculum_right">
     <div class="curriculum_title">
@@ -53,6 +106,52 @@
         {/each}
       </div>
     </div>
-    <div>3</div>
+    <div class="curriculum_stack">
+      <h2>Stack Tecnológico</h2>
+      <div class="curriculum_icons">
+        <div class="curriculum_icons--items">
+          <p>Html5</p>
+          <Html />
+        </div>
+        <div class="curriculum_icons--items">
+          <p>Css3</p>
+          <Css3 />
+        </div>
+        <div class="curriculum_icons--items">
+          <p>Sass</p>
+          <Sass />
+        </div>
+        <div class="curriculum_icons--items">
+          <p>Javascript</p>
+          <Javascript />
+        </div>
+        <div class="curriculum_icons--items">
+          <p>Bulma</p>
+          <Bulma />
+        </div>
+      </div>
+      <div class="curriculum_icons">
+        <div class="curriculum_icons--items">
+          <p>React</p>
+          <React />
+        </div>
+        <div class="curriculum_icons--items">
+          <p>Svelte</p>
+          <Svelte />
+        </div>
+        <div class="curriculum_icons--items">
+          <p>Git</p>
+          <Git />
+        </div>
+        <div class="curriculum_icons--items">
+          <p>Bitbucket</p>
+          <Bitbucket />
+        </div>
+        <div class="curriculum_icons--items">
+          <p>Azure</p>
+          <Azure />
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -6,7 +6,7 @@ const NAVS = [
   },
   {
     href: "/about",
-    title: "Sobre Mí",
+    title: "About",
     img:'img/icons/user.svg',
   },
   {

@@ -70,11 +70,21 @@
     }
 
     li {
-      padding: 5px;
+      p {
+        font-size: .8rem;
+
+        @include tablet {
+          font-size: inherit;
+        }
+      }
     }
 
     img {
-      width: 40px;
+      width: 30px;
+
+      @include tablet {
+        width: 40px;
+      }
     }
   }
 }
