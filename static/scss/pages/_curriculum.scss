@@ -79,7 +79,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 100px 50px;
+    padding: 50px;
 
     @include desktop {
       padding: 200px 50px;
@@ -91,14 +91,23 @@
     }
 
     p {
-      font-size: 1.3rem;
+      font-size: 1rem;
       text-align: justify;
       padding: 20px 0;
+
+      @include tablet {
+        font-size: 1.3rem;
+      }
     }
 
     h2 {
       font-family: 'Babylonica', cursive;
-      font-size: 3rem;
+      font-size: 2rem;
+      letter-spacing: 2px;
+
+      @include tablet {
+        font-size: 2.5rem;
+      }
     }
 
     span {
@@ -112,7 +121,11 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 100px 50px;
+    padding: 50px;
+
+    @include desktop {
+      padding: 100px 50px;
+    }
 
     &--icon {
       display: flex;

@@ -5,11 +5,6 @@ const NAVS = [
     img:'img/icons/smart-home.svg',
   },
   {
-    href: "/about",
-    title: "About",
-    img:'img/icons/user.svg',
-  },
-  {
     href: "/curriculum",
     title: "Currículum",
     img:'img/icons/file-description.svg',

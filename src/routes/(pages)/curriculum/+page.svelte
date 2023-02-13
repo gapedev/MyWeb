@@ -40,7 +40,7 @@
         quis fugit voluptates consequuntur eveniet assumenda illo, in cumque
         quam.
       </p>
-      <h2>Gabriel Pérez</h2>
+      <h2>Gabriel Pérez Licerán</h2>
       <span>Desarrollador Front-End</span>
     </div>
     <div class="curriculum_rrss">

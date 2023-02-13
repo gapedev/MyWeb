@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.ImageJob {
+  background-image: url(`var(--img)`);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 500px;
+  height: 500px;
+}
