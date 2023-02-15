@@ -1,38 +1,38 @@
 const Images = [ 
 {
-  img:'../../static/img/halcon.png',
+  img:'../img/halcon.png',
   link:'https://www.halconviajes.com/',
 },
 {
-  img:'../../static/img/geomoon.png',
+  img:'../img/geomoon.png',
   link:'https://www.geomoon.com/',
 },
 {
-  img:'../../static/img/puro.png',
+  img:'../img/puro.png',
   link:'https://www.purohotel.com/es/boutique-hotel-palma/'
 },
 {
-  img:'../../static/img/ferrer.png',
+  img:'../img/ferrer.png',
   link:'https://www.ferrerhotels.com/es/'
 },
 {
-  img:'../../static/img/w2fly.png',
+  img:'../img/w2fly.png',
   link:'https://www.w2fly.es/es-es',
 },
 {
-  img:'../../static/img/ubico.png',
+  img:'../img/ubico.png',
   link:'https://www.halconviajes.com/',
 },
 {
-  img:'../../static/img/icarion.png',
+  img:'../img/icarion.png',
   link:'https://www.icarion.es/',
 },
 {
-  img:'../../static/img/flowo.png',
+  img:'../img/flowo.png',
   link:'https://www.flowo.com/',
 },
 {
-  img:'../../static/img/enorth.png',
+  img:'../img/enorth.png',
   link:'https://www.e-northsafaris.com/en-en',
 },
 ]
