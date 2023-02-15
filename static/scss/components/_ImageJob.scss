@@ -5,11 +5,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
-  padding: 20px 0;
+  padding: 20px;
+
+  @include desktop {
+    padding: 20px 0;
+  }
 }
 
 .ImageJob {
-  width: 350px;
   height: 350px;
   border-radius: 7px;
   background: $white;
@@ -19,6 +22,11 @@
   flex-direction: column;
   justify-content: space-between;
   background-size: cover;
+
+  @include desktop {
+    width: 380px;
+    height: 350px;
+  }
 
   &:hover {
     -webkit-transform: scale(1.1);
