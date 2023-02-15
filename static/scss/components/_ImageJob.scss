@@ -4,21 +4,42 @@
 .container-job {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 10px;
+  gap: 20px;
+  padding: 20px 0;
 }
 
 .ImageJob {
-  background-image: var(--img);
-  background-repeat: no-repeat;
+  width: 350px;
+  height: 350px;
+  border-radius: 7px;
+  background: $white;
+  box-shadow: 0 0 1.5rem 0 rgb(35 30 32 / 10%);
+  transition: all ease-in-out .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-size: cover;
-  box-shadow: 0 0 5px rgb(0 0 0 / 15%);
-  position: relative;
-  width: 100%;
-  height: 400px;
-  margin: 0.5vh;
-  background-size: cover;
-  overflow: hidden;
-  cursor: pointer;
-  background: #20f;
-  backdrop-filter: blur(20px);
+
+  &:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  &_text {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background-color: #ffba31;
+    width: 60%;
+
+    h2 {
+      color: #fff;
+    }
+  }
+
+  &_logo {
+    width: 100%;
+
+    img {
+      border-radius: 7px 7px 0 0;
+    }
+  }
 }

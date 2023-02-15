@@ -3,12 +3,9 @@
 </script>
 
 <div class="container-job">
-  {#each Images as { img }}
-    <div class="ImageJob" style="background-image:url({img})">
-      <div class="ImageJob_text">
-        <h2>Hola</h2>
-        <span>Hola holita</span>
-      </div>
-    </div>
+  {#each Images as { img, link }}
+    <a href={link} target="_blank noreferrer">
+      <div class="ImageJob" style="background-image:url({img})" />
+    </a>
   {/each}
 </div>

@@ -10,7 +10,7 @@
       mi conocimiento y aparte de maquetar, poder crear las aplicaciones desde
       0.
     </p>
-    <a href="/about">Más Sobre Mí</a>
+    <a href="/curriculum">Más Sobre Mí</a>
   </div>
   <div class="home_img">
     <img src="/img/gabi.jpg" alt="Foto de Gabriel Pérez Licerán" />
