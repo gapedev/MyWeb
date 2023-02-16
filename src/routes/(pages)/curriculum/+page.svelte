@@ -25,9 +25,17 @@
         <span>Gabi</span>
       </div>
       <div class="curriculum_adress--info">
-        <p><a href="">gapedev@gmail.com</a></p>
-        <p><a href="">www.demomento.com</a></p>
-        <p>Palma de Mallorca</p>
+        <p>
+          <a href="mailto:gapedev@gmail.com" target="_blank noreferrer"
+            >gapedev@gmail.com</a
+          >
+        </p>
+        <p>
+          <a href="https://gapedev.netlify.app/" target="_blank noreferrer"
+            >https://gapedev.netlify.app/</a
+          >
+        </p>
+        <p>601 06 87 78</p>
       </div>
     </div>
     <div class="curriculum_img">
@@ -36,9 +44,11 @@
     <div class="curriculum_text">
       <h4>Sobre Mí</h4>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam
-        quis fugit voluptates consequuntur eveniet assumenda illo, in cumque
-        quam.
+        +5 años de experiencia en desarrollo web, utlizando distintas
+        tecnologías. He ayudado a construir marcas desde 0, y he tenido contacto
+        con el cliente, dándole consejo y adaptando la web como él quiere. Por
+        supuesto todo en un entorno responsive, y buenas prácticas para su
+        posicionamiento.
       </p>
       <h2>Gabriel Pérez Licerán</h2>
       <span>Desarrollador Front-End</span>

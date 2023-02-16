@@ -1,8 +1,6 @@
 <script>
   import { page } from "$app/stores";
   import NAVS from "../services/menu";
-  import Close from "./Close.svelte";
-  import Menu from "./Menu.svelte";
 
   $: menu = "";
 

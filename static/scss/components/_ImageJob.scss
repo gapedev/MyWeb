@@ -3,12 +3,13 @@
 
 .container-job {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 20px;
   padding: 20px;
 
   @include desktop {
     padding: 20px 0;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
 
@@ -24,7 +25,6 @@
   background-size: cover;
 
   @include desktop {
-    width: 380px;
     height: 350px;
   }
 

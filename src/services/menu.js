@@ -14,16 +14,6 @@ const NAVS = [
     title: "Portfolio",
     img:'img/icons/device-desktop.svg',
   },
-  {
-    href: "/proyectos",
-    title: "Proyectos",
-    img:'img/icons/code.svg',
-  },
-  {
-    href: "/contacto",
-    title: "Contacto",
-    img:'img/icons/address-book.svg',
-  },
 ];
 
 export default NAVS;
