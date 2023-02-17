@@ -80,7 +80,7 @@
         </div>
         <div class="curriculum_rrss--text">
           <p>
-            <a href="">www.demomento.com</a>
+            <a href="">https://gapedev.netlify.app/</a>
           </p>
         </div>
       </div>
